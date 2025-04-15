@@ -1,15 +1,80 @@
 
-**General Notes**
+# 🧑‍🏫 OnlineCourseApp
 
-An `onlinecourse` app has already been provided in this repo upon which you will be adding a new assesement feature.
+**OnlineCourseApp** is a Django-based web application for managing online courses. Users can register, enroll in courses, submit answers to quizzes, and view their results.
 
-- If you want to develop the final project on Theia hosted by [IBM Developer Skills Network](https://labs.cognitiveclass.ai/), you will need to create the same project structure on Theia workspace and save it everytime you close the browser
-- Or you could develop the final project locally by setting up your own Python runtime and IDE
-- Hints for the final project are left on source code files
-- You may choose any cloud platform for deployment (default is IBM Cloud Foundry)
-- Depends on your deployment, you may choose any SQL database Django supported such as SQLite3, PostgreSQL, and MySQL (default is SQLite3)
+----------
 
-**ER Diagram**
-For your reference, we have prepared the ER diagram design for the new assesement feature.
+## 📁 Project Structure
 
-![Onlinecourse ER Diagram](https://github.com/ibm-developer-skills-network/final-cloud-app-with-database/blob/master/static/media/course_images/onlinecourse_app_er.png)
+
+```
+tfjzl-final-cloud-app-with-database/
+├── onlinecourse/              # Main app with models, views, templates, etc.
+│   ├── templates/onlinecourse/  # HTML templates for user interface
+│   ├── admin.py               # Admin site registration
+│   ├── models.py              # Data models for courses, users, questions, etc.
+│   ├── views.py               # Core logic for user registration, login, enrollment, and quiz
+│   └── urls.py                # URL routing for the app
+├── static/                    # Static files (CSS, JS, etc.)
+├── manage.py                  # Django’s CLI management tool
+├── requirements.txt           # Python dependencies
+├── db.sqlite3                 # SQLite database` 
+```
+----------
+
+## 🚀 Features
+
+-   User Registration & Login
+    
+-   Course Listing and Enrollment
+    
+-   Dynamic Exam Submission and Auto-Grading
+    
+-   Displays Exam Results with Scores
+    
+-   Admin Interface for Managing Models
+    
+
+----------
+
+## ⚙️ Installation
+
+1.  **Clone the repository**
+    
+    `git clone https://github.com/StivenHenao/OnlineCourseApp.git cd OnlineCourseApp` 
+    
+2.  **Create a virtual environment (optional but recommended)**    
+    `python3 -m venv djangoenv source djangoenv/bin/activate` 
+    
+3.  **Install dependencies**
+    
+    `pip install -r requirements.txt` 
+    
+4.  **Run migrations**
+ 
+    `python manage.py migrate` 
+    
+5.  **Start the development server**
+    
+    `python manage.py runserver` 
+    
+6.  **Access the app**  
+    Open your browser and go to `http://127.0.0.1:8000/`
+    
+
+----------
+
+## 🗃️ Models Overview Diagram
+
+<div align="center"> <img src="https://i.imgur.com/LneeFuT.png" width="80%" alt="Add Customer Preview" /> <br/>
+
+----------
+
+## 📸 Screenshots
+
+<div align="center"> <h3>🏠 Home</h3> <img src="https://i.imgur.com/YtZKbI4.png" width="80%" alt="Home Preview" /> <br/>
+
+<div align="center"> <h3>👓 Start Quiz</h3> <img src="https://i.imgur.com/Tt21LL3.png" width="80%" alt="Add Customer Preview" /> <br/>
+
+<div align="center"> <h3>✅ Results</h3> <img src="https://i.imgur.com/J2HkOms.png" width="80%" alt="Summary Preview" /> <br/>
