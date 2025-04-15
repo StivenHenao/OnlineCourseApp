@@ -1,8 +1,5 @@
 from django.contrib import admin
-# <SUGERENCIA> Importa aquí cualquier nuevo Modelo
 from .models import Course, Lesson, Instructor, Learner, Question, Choice, Submission
-
-# <SUGERENCIA> Registra las clases QuestionInline y ChoiceInline aquí
 
 
 class LessonInline(admin.StackedInline):
@@ -32,7 +29,6 @@ class LessonAdmin(admin.ModelAdmin):
     list_display = ['title']
 
 
-# <SUGERENCIA> Registra los modelos Question y Choice aquí
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)
